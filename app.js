@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 /**
- * 
+ * Handled POST requests for rendering the JSON to API
  */
 app.post('/', (req, res) => {
     // Creating PDF from body
