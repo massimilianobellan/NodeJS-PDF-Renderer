@@ -1,0 +1,18 @@
+{
+  "name": "@beeanco/invoice-pdf-service",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Your objective is to develop a node.js microservice that renders invoices to PDFs.",
+  "license": "UNLICENSED",
+  "author": "Massimiliano Bellan",
+  "scripts": {
+    "start": "node app.js",
+    "test": "test.sh"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pdfmake": "^0.2.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {}
+}

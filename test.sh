@@ -1,0 +1,1 @@
+curl.exe -X POST -H "Content-Type: application/json" -d "@./test/fixtures/sample-request.json" http://localhost:3000 --output test/results/sample-request.pdf
