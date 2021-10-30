@@ -7,7 +7,7 @@
   "author": "Massimiliano Bellan",
   "scripts": {
     "start": "node app.js",
-    "test": "test.sh"
+    "test": "curl -X POST -H 'Content-Type: application/json' -d @./test/fixtures/sample-request.json http://localhost:3000 --output test/results/sample-request.pdf"
   },
   "dependencies": {
     "express": "^4.17.1",

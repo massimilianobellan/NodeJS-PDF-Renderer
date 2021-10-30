@@ -7,7 +7,7 @@ The service can be started with `npm run start` and it listens on port 3000
 ## Testing the service
 The service can be tested with `npm run test`.
 
-It is currently set up for unix systems and runs the command:
+It is currently set up for unix systems and runs the command (Will not work on Windows machine):
 
 ```sh
 curl -X POST -H "Content-Type: application/json" -d @./test/fixtures/sample-request.json http://localhost:3000 --output test/results/sample-request.pdf
