@@ -130,7 +130,10 @@ module.exports = {
                 widths: [200, '*', '*', '*'],
                 headerRows: 1,
                 body: [
-                    [{text: 'Besteller Artikel', style: 'tableHeader', alignment: 'left'}, {text: 'Artikelnummer', style: 'tableHeader'}, {text: 'Menge', style: 'tableHeader'}, {text: 'Preis', style: 'tableHeader'}]
+                    [{text: 'Besteller Artikel', style: 'tableHeader', alignment: 'left'},
+                    {text: 'Artikelnummer', style: 'tableHeader'},
+                    {text: 'Menge', style: 'tableHeader'},
+                    {text: 'Preis', style: 'tableHeader'}]
                 ]
             },
             style: 'articleDescription',
@@ -142,8 +145,10 @@ module.exports = {
         var items = json.order.items;
         items.forEach(item => {
             tableContent.table.body.push(
-                [{text: item.product.vendor.name, style: 'articleTitle', colSpan: 4, margin: [0, 30, 0, 0]}],
-                [item.product.name, {text: '#' + item.product.sku, alignment: 'center'}, {text: item.quantity, alignment: 'center'}, {text: item.price.toLocaleString('en-US', {style: 'currency', currency: 'EUR'}), alignment: 'center'}]
+                [{text: item.product.vendor.name, style: 'articleTitle', colSpan: 4, margin: [0, 30, 0, 0]}],               // Article Title
+                [item.product.name, {text: '#' + item.product.sku, alignment: 'center'},                                    // Product Name
+                {text: item.quantity, alignment: 'center'},                                                                 // Item Quantity
+                {text: item.price.toLocaleString('en-US', {style: 'currency', currency: 'EUR'}), alignment: 'center'}]      // Item Price
             );
         });
 
